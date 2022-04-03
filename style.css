@@ -1,0 +1,114 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  /* all style colors from mdn new design dark mode */
+
+  --text-primary: #fbfbfe;
+  --text-secondary: #cfcfd8;
+  --text-inactive: #cfcfd8a6;
+  --text-invert: #15141a;
+
+  --background-primary: #15141a;
+  --background-secondary: #23222b;
+  --background-tertiary: #2b2a33;
+  --border-primary: #52525e;
+  --border-secondary: #3a3944;
+
+  --button-primary-default: #fbfbfe;
+  --button-primary-hover: #cfcfd8;
+  --button-primary-active: #9f9fad;
+  --button-primary-inactive: #fbfbfe;
+
+  --icon-success: #39a038;
+  --icon-warning: #e06633;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-primary);
+  background-color: var(--background-primary);
+}
+
+label {
+  font-size: 1px;
+}
+
+form {
+  margin-top: 20px;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+form input {
+  padding-left: 20px;
+  height: 40px;
+  width: 70%;
+  color: var(--text-secondary);
+  background-color: var(--background-secondary);
+  border: unset;
+  border: 3px solid var(--border-secondary);
+  border-radius: 8px;
+  font-size: 18px;
+}
+
+h2 {
+  margin-top: 100px;
+}
+
+div {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+p {
+  overflow-x: hidden;
+  padding-top: 5px;
+  padding-left: 10px;
+  margin: unset;
+  font-size: 20px;
+  width: 70%;
+  height: 100%;
+  background-color: var(--background-secondary);
+  border-radius: 5px;
+  border: 2px solid var(--border-secondary);
+}
+
+button {
+  font-weight: 700;
+  background-color: unset;
+  border: unset;
+  color: unset;
+  padding: unset;
+}
+
+button {
+  font-size: 16px;
+  padding: 10px 15px;
+  background-color: var(--button-primary-default);
+  color: var(--text-invert);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--button-primary-hover);
+}
+
+button:active {
+  background-color: var(--button-primary-active);
+}
+
+.all-btn {
+  margin-top: 50px;
+}
