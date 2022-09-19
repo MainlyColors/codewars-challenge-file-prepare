@@ -2,7 +2,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   /* all style colors from mdn new design dark mode */
 
   --text-primary: #fbfbfe;
@@ -27,6 +27,7 @@
 
 body {
   height: 100vh;
+  margin: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
