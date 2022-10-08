@@ -1,5 +1,9 @@
 'use strict';
+// only 1 input
+const inputEl = document.querySelector('input');
+const outputEl = document.querySelector('#output');
 
+// Convert Codewar Title to JavaScript File name
 function convertTitleToFileName(str) {
   const regex = new RegExp(/\?/, 'g');
   const newStr = str.replace(regex, '');
@@ -13,14 +17,12 @@ function convertTitleToFileName(str) {
   );
 }
 
-// only 1 input
-const inputEl = document.querySelector('input');
-const outputEl = document.querySelector('#output');
-
+// prevent Form from submitting on enter key press
 document.querySelector('form').addEventListener('submit', (e) => {
   e.preventDefault();
 });
 
+// grab text after input change event and put conversion in output element
 let text;
 
 inputEl.addEventListener('change', (e) => {
