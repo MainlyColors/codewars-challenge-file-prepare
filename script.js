@@ -1,8 +1,11 @@
 'use strict';
 
 function convertTitleToFileName(str) {
+  const regex = new RegExp(/\?/, 'g');
+  const newStr = str.replace(regex, '');
+
   return (
-    str
+    newStr
       .split(' ')
       .map((word) => word[0].toUpperCase() + word.slice(1))
       .join('') + '.js'
@@ -42,7 +45,9 @@ document.querySelector('#copy').addEventListener('click', function (e) {
 
 //all in one button
 document.querySelector('#allInOne').addEventListener('click', function (e) {
+  // get text copied to the clipboard
   navigator.clipboard.readText().then((text) => {
+    // convert text to a js file name
     let copyBoardText = convertTitleToFileName(text);
     navigator.clipboard.writeText(copyBoardText);
   });
