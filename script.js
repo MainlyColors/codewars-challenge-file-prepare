@@ -50,8 +50,14 @@ document.querySelector('#copy').addEventListener('click', function (e) {
 document.querySelector('#allInOne').addEventListener('click', function (e) {
   // get text copied to the clipboard
   navigator.clipboard.readText().then((text) => {
+    // place text in input to show user
+    inputEl.value = text;
+
     // convert text to a js file name
     let copyBoardText = convertTitleToFileName(text);
+
+    //place completed text in output to show user
+    outputEl.textContent = copyBoardText;
     navigator.clipboard.writeText(copyBoardText);
   });
 });
